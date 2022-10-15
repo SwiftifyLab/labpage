@@ -1,0 +1,220 @@
+/* Universal */
+@font-face {
+    font-family: "GoogleSans Regular";
+    src: url('../GSR.ttf') format('truetype');
+}
+#page {
+    background: #1c1c17;
+    font-family: "GoogleSans Regular", "system-ui";
+    margin: 0!important;
+    padding: 0!important;
+    color: #fff;
+    position: relative;
+    user-select: none;
+    }
+.theme{
+        color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+    width: 0.6em;
+    overflow: visible;
+}
+::-webkit-scrollbar-track {
+    width: 0.3em;
+    background: linear-gradient(to right, #0000 40.01%, #313126 40.02%);
+    border-radius: 0em 0 0 0.4em;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #bbf778da;
+    border-radius: 0.3em 0 0 0.3em;
+    width: 0.6em;
+    left: -0.3em!important;
+    position: relative;
+}
+.loading #content{
+    opacity: 0.5;
+}
+.loading #navbar li, .loading .phone{
+    opacity: 0.0;
+    animation: none;
+}
+.loading #navbar {
+    height: 100%;
+    background-color: #14140b17;
+    background-size: 10%;
+    animation: bigger-bg .5s;
+    background-position: center;
+}
+.loading2 #content{
+    display: none;
+}
+/*Navigation Bar*/
+
+#navbar {
+background-color: #484741da;
+background-image: url(../assets/mipmap/wlee.png);
+background-size: 3.5em;
+width: 100%;
+backdrop-filter: blur(0.3em);
+height: 4.6em;
+border-radius: 0 0 1em 1em;
+z-index: 2046;
+position: sticky;
+display: flex;
+flex-direction: column;
+position: -webkit-sticky;
+top: 0;
+transition: all .5s;
+background-repeat: no-repeat;
+background-position: 1em center;
+}
+.navbar-toggler {
+    display: none;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto;
+    margin-top: 0.7em;
+    margin-right: 0.7em;
+}
+.nav-link:-webkit-any-link {
+    color: #fff!important;
+    text-decoration-line: none;
+    font-weight: bolder;
+}
+#navbar li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    padding: 0.5em 0.5em;
+    color: #fff!important;
+    font-weight: bold;
+    font-size: larger;
+    }
+#navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}
+
+/*Web Content*/
+#content{
+    width: calc(100% - 36px);
+    padding: 18px;
+    z-index: 2;
+    position: relative;
+    transition: all .5s;
+}
+.banner {
+    width: 100%;
+    height: 27em;
+    border-radius: 1em;
+    background: #31312B;
+    margin-top: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+}
+.banner.banner1 .title {
+    font-size: 200%;
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    left: 5%;
+    transition: all .2s;
+}
+.banner.banner1 .subtitle {
+    width: 40%;
+    font-size: 120%;
+    position: absolute;
+    font-weight: normal;
+    top: 60%;
+    left: 5%;
+    transition: all .2s;
+}
+.banner1 .download, .banner1 .contribute {
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 120%;
+    position: absolute;
+    font-weight: normal;
+    top: 79%;
+    left: 5%;
+    border: none;
+    background: #ACB060;
+    color: #212121;
+    border-radius: 1em;
+}
+.banner1 .contribute {
+    left: calc(6% + 9rem);
+}
+.banner1 .phone {
+    width: 30%;
+    height: 90%;
+    object-fit: contain;
+    position: absolute;
+    left: 60%;
+    transition: all .2s, transform 2s;
+    animation: floating 5s infinite alternate-reverse;
+}
+.advantages .banner-title {
+    text-align: center;
+    width: 100%;
+    top: 2rem;
+    font-size: 200%;
+    position: absolute;
+    font-weight: bold;
+    transition: all .2s;
+}
+.advantages .container-grid {
+    width: calc(100% - 36px);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    top: 7rem;
+    position: relative;
+    margin: auto;
+    transition: all .2s;
+}
+.advantages .container-grid .grid{
+    width: auto;
+    height: 16rem;
+    background-color: rgba(126, 126, 126, 0.171);
+    margin: 1em;
+    border-radius: 2em;
+    transition: all .2s;
+}
+.advantages .container-grid .grid:hover{
+    transform: scale(1.1);
+}
+.advantages .container-grid .grid .material-symbols-rounded{
+    position: relative;
+    z-index: 1;
+    font-size: 7.4em;
+    top: 13%;
+}
+.advantages .container-grid .grid .title{
+    font-weight: bold;
+    font-size: 130%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    top: 16%;
+    display: block;
+}
+.advantages .container-grid .grid .subtitle{
+    top: 18%;
+    font-size: medium;
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    display: block;
+}

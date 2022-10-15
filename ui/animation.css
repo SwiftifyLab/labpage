@@ -1,0 +1,18 @@
+@keyframes floating {
+    0% {
+        transform: translateY(-2em);
+    }
+    100% {
+        transform: translateY(2em);
+    }
+}
+@keyframes bigger-bg {
+    0% {
+        background-size: 0%;
+    }
+    60% {
+        background-size: 30%;
+    }
+    100% {
+    }
+}

@@ -1,0 +1,44 @@
+/* Adapt To Mobile*/
+@media only screen and (max-width: 907px) {
+    .banner.banner1 .title {
+        top: 40%;
+    }
+    .banner.banner1 .subtitle {
+        width: 50%;
+        top: 50%;
+    }
+    .loading #navbar {
+        background-size: 17%;
+    }
+}
+@media only screen and (max-width: 537px) {
+    .banner1 .phone{
+        opacity: 0;
+    }
+    .banner.banner1 .title {
+        top: 30%;
+    }
+    .banner.banner1 .subtitle {
+        width: 90%;
+        top: 50%;
+    }
+    .loading #navbar {
+        background-size: 20%;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .advantages .container-grid {
+        grid-template-columns: 50% 50%;
+    }
+    .advantages {
+        height: 46em;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .advantages .container-grid {
+        grid-template-columns: 100%;
+    }
+    .advantages {
+        height: 82em;
+    }
+}

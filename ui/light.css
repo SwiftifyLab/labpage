@@ -1,0 +1,32 @@
+::-webkit-scrollbar-track {
+    background: linear-gradient(to right, #0000 40.01%, #585754 40.02%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #767421;
+}
+.theme{
+    color: #fff;
+}
+#page {
+    background: #f4f0e8;
+    color: #212121 !important;
+}
+
+.banner {
+    background: #FDF9F0;
+}
+
+.nav-link:-webkit-any-link {
+    color: #212121 !important;
+}
+
+#navbar li {
+    color: #212121 !important;
+}
+
+#navbar {
+    background-color: #c0bdb6da;
+}
+.loading #navbar {
+    background-color: #313131da;
+}
