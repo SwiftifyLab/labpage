@@ -1,10 +1,11 @@
 //App Start Up
-$(document).ready(startup());
+$(window).on('load', startup);
 $('head').append('<link rel="stylesheet" type="text/css" href="ui/material.css">');
 $('head').append('<link rel="stylesheet" type="text/css" href="ui/light.css" media="(prefers-color-scheme: light)">');
 $('head').append('<link rel="stylesheet" type="text/css" href="ui/animation.css">');
 $('head').append('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0&display=swap" />');
 $('head').append('<link rel="stylesheet" type="text/css" href="ui/smalldevice.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="ui/loading.css">');
     
 function startup() {
     setTimeout(function () {

@@ -1,8 +1,14 @@
 .device, .devicedl .download {
     display: none;
 }
-
+.devicedl .download {
+    display: none;
+}
 .devicedl .device {
+    height: 0rem !important;
+    display: block;
+}
+.devicedl.fetched .device {
     height: 24rem !important;
     display: block;
 }
@@ -49,9 +55,8 @@
     transition: all .2s;
 }
 
-.download {
+.fetched .download {
     height: calc(100% - 4.6rem - 36px) !important;
-    margin: none;
 }
 
 #content {
@@ -119,4 +124,30 @@
     margin: auto;
     text-align: center;
     display: block;
+}
+.download .container-grid .grid .phone {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    height: 8.3em;
+    top: 7%;
+    object-fit: contain;
+}
+
+.fetched .loadspinner{
+    display: none!important;
+  }
+  .device .sub-banner button{
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 120%;
+    position: absolute;
+    font-weight: normal;
+    top: 79%;
+    border: none;
+    background: #babe6c;
+    color: #212121;
+    border-radius: 1em;
+    z-index: 1;
+    left: calc(30% + 4.5rem);
 }

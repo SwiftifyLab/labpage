@@ -23,18 +23,18 @@ var advantages = `
                     <div class="grid uptodate" onmouseover="ripple('.uptodate')">
                         <span class="material-symbols-rounded" translate="no">system_update</span>
                         <span class="title">Up-To-Date</span>
-                        <span class="subtitle">We Always Merging New Security Patch</span>
+                        <span class="subtitle">Always Use New Security Patch</span>
                     </div>
 `;
 
-$(document).ready(function () {
+$(window).on('load', function () {
     $('.advantages .container-grid').append(advantages)
     $('.sourcechecker').append(sourcechecker)
      
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.querySelector('.phone').src = "assets/drawable/phone_light.png";
     }
-    
+
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         const newColorScheme = event.matches ? "dark" : "light";
         if (newColorScheme == 'light') {
@@ -43,6 +43,5 @@ $(document).ready(function () {
         if (newColorScheme == 'dark') {
             document.querySelector('.phone').src = "assets/drawable/phone_dark.png";
         }
-        console.log(newColorScheme)
     });
 });

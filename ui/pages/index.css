@@ -21,8 +21,7 @@
     z-index: 1;
 }
 
-.banner1 .download,
-.banner1 .contribute {
+.banner1 button{
     width: 9rem;
     height: 2.5rem;
     font-size: 120%;
@@ -31,7 +30,7 @@
     top: 79%;
     left: 5%;
     border: none;
-    background: #f6fc8f;
+    background: #babe6c;
     color: #212121;
     border-radius: 1em;
     z-index: 1;

@@ -34,20 +34,28 @@
     <div id="content">
         <div class="container">
             <div class="banner device">
-                <span class="banner-title">Fetching Database</span>
-                <span class="banner-subtitle">Fetching Codename</span>
-                <span class="banner-maintainer">Fetching Maintainer</span>
                 <img class="phone" src="assets/drawable/phone_dark.png" alt="Anroid">
+                <div class="sub-banner">
+                    <span class="banner-title">Fetching Database</span>
+                    <span class="banner-subtitle">Fetching Codename</span>
+                    <span class="banner-maintainer">Fetching Maintainer</span>
+                    <button onclick="ripple('.dlrom');"
+                    class="dlrom">Download</button>
+                </div>
             </div>
             <div class="banner download">
                 <span class="banner-title">Download</span>
                 <span class="banner-subtitle">Select Your Device</span>
                 <input class="banner-search"></input>
-                <div class="container-grid">
-                    <div class="grid dummy" onmousedown="ripple('.dummy')">
-                        <span class="material-symbols-rounded" translate="no">android</span>
-                        <span class="title">Dummyphone C3</span>
-                        <span class="subtitle">dummy</span>
+                <div class="container-grid"></div>
+            </div>
+            <div class="loadspinner">
+                <div class="spinner">
+                    <div class="circle circle-1">
+                        <div class="circle-inner"></div>
+                    </div>
+                    <div class="circle circle-2">
+                        <div class="circle-inner"></div>
                     </div>
                 </div>
             </div>

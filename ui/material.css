@@ -195,3 +195,10 @@ input.banner-search{
     font-weight: normal;
     transition: all .2s;
 }
+.loadspinner {
+    width: 100%;
+    text-align: center;
+  }
+  .loadspinner.hide{
+    display: none!important;
+  }
