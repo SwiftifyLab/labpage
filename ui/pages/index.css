@@ -55,6 +55,9 @@
 .sourcechecker {
     height: 15em !important;
 }
+.ads {
+    height: 6.3em !important;
+}
 
 .advantages .container-grid {
     width: calc(100% - 36px);

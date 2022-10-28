@@ -49,8 +49,8 @@
 
     .device .sub-banner button {
         position: relative !important;
-        top: 99% !important;
-        left: 50% !important;
+        margin-top: 9rem !important;
+        left: calc(50% - 4.5rem) !important;
     }
 
     .device .banner-title,
