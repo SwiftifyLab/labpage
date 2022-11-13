@@ -1,5 +1,5 @@
 $(window).on('load', startup);
-var baseurl = 'https://raw.githubusercontent.com/SwiftLabo/database/web/data/'
+var baseurl = 'https://raw.githubusercontent.com/SwiftifyLab/database/web/data/'
 //Load Pages Styles
 $('head').append('<link rel="stylesheet" href="ui/pages/download.css" />');
 //Start Add Pages
