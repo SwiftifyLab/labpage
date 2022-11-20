@@ -8,12 +8,12 @@
     <link rel="preload" href="assets/mipmap/wlee.png" as="image" />
     <title>About - SwiftAOSP</title>
     <meta name="description" content="">
-    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="64x64">
     <link rel="apple-touch-icon" href="assets/wlee.png" sizes="180x180">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="ui/material.css">
-    <script src="scripts/pages/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="ui/pages/about.css">
+    <script src="scripts/pages/about.js"></script>
     <script src="scripts/base.js"></script>
 </head>
 
@@ -33,8 +33,19 @@
     </nav>
     <div id="content">
         <div class="container">
-            <div class="banner error">
-                <span class="banner-title">The Page Is Under Construction</span>
+            <div class="banner banner1">
+                <span class="title">About SwiftOS</span>
+                <span class="subtitle">SwiftOS is a ROM that focuses on having unique features without compromising the
+                    performace of AOSP!</span>
+                <img class="phone" src="assets/drawable/phone_dark.png" alt="Android">
+            </div>
+            <div class="banner banner2">
+                <span class="title">About Our Core Dev</span>
+                <span class="subtitle">Those Who Have Worked On This Project Until Now</span>
+                <div class="list-wrapper" ng-app="app" ng-controller="MainCtrl as ctrl">
+                    <ul class="list">
+                    </ul>
+                  </div>
             </div>
         </div>
     </div>

@@ -8,13 +8,13 @@
     <link rel="preload" href="assets/mipmap/wlee.png" as="image" />
     <title>Repository - SwiftAOSP</title>
     <meta name="description" content="Here Is The Place To Check If There Are Any Changes In SwiftAOSP!">
-    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/mipmap/wlee.png" type="image/png" sizes="64x64">
     <link rel="apple-touch-icon" href="assets/wlee.png" sizes="180x180">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="ui/material.css">
-    <link rel="stylesheet" type="text/css" href="ui/pages/404.css">
+    <link rel="stylesheet" type="text/css" href="ui/pages/repository.css">
     <script src="scripts/base.js"></script>
+    <script src="scripts/pages/repository.js"></script>
 </head>
 
 <body id="page">
@@ -33,9 +33,14 @@
     </nav>
     <div id="content">
         <div class="container">
-            <div class="banner error">
+            <div class="banner repository">
                 <span class="banner-title">Repository</span>
                 <span class="banner-subtitle">here you check the repository of SwiftAOSP if you are lazy to open github</span>
+                <div class="list-wrapper" ng-app="app" ng-controller="MainCtrl as ctrl">
+                    <ul class="list">
+                    </ul>
+                  </div>
+            </div>
             </div>
         </div>
     </div>

@@ -51,7 +51,7 @@
     overflow: hidden;
 }
 .loading #navbar {
-    height: 100%;
+    height: 100vh;
     background-color: #14140b17;
     background-size: 10%;
     animation: bigger-bg .5s;

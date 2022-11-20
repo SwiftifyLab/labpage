@@ -45,6 +45,17 @@ async function fetchDeviceData(file) {
         $('.device .banner-maintainer').text(obj.maintainer)
         var pictures = `${baseurl}/${obj.pictures}`
         document.querySelector('.phone').src = pictures;
+        var isAvailable = `${obj.isAvailable}`
+        if(isAvailable == "false"){
+            const el = document.querySelector('.dlrom');
+            el.classList.add("offline");
+            el.innerHTML = 'Not Available'
+        }
+        if(isAvailable == "true"){
+            const el = document.querySelector('.dlrom');
+            el.classList.add("online");
+            el.innerHTML = 'Download'
+        }
         const el = document.querySelector('#page');
         el.classList.add("fetched");
     }
