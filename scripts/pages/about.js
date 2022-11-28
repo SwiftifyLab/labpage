@@ -3,7 +3,7 @@ var baseurl = 'https://raw.githubusercontent.com/SwiftifyLab/database/web/data'
 
 async function getDevice() {
     console.log('sek')
-    let url = `${baseurl}/list/mcore.json`
+    let url = `${baseurl}/list/labteam.json`
     try {
         let res = await fetch(url);
         return await res.json();

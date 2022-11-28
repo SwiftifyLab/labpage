@@ -1,14 +1,14 @@
 $(window).on('load', renderUsers);
-var baseurl = 'https://github.com/SwiftAOSP'
+var baseurl = 'https://github.com/SwiftifyLab'
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 
 async function getDevice() {
-    let url = `https://api.github.com/orgs/SwiftAOSP/repos?per_page=100&page=1&sort=updated&direction=asc`
+    let url = `https://api.github.com/orgs/SwiftifyLab/repos?per_page=100&page=1&sort=updated&direction=asc`
     if(params.list == 'pushed'){
-    url = `https://api.github.com/orgs/SwiftAOSP/repos?per_page=100&page=1&sort=pushed&direction=desc`
+    url = `https://api.github.com/orgs/SwiftifyLab/repos?per_page=100&page=1&sort=pushed&direction=desc`
    }
     try {
         let res = await fetch(url);

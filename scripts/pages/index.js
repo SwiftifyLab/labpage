@@ -1,47 +1,45 @@
-//Load Pages Styles
-$('head').append('<link rel="stylesheet" href="ui/pages/index.css" />');
-//Start Add Pages
-var sourcechecker = `
+$(window).on('load', renderUsers);
+var baseurl = 'https://github.com/SwiftifyLab'
 
-`;
-var advantages = `
-                    <div class="grid light" onmouseover="ripple('.light')">
-                        <span class="material-symbols-rounded" translate="no">bolt</span>
-                        <span class="title">Light</span>
-                        <span class="subtitle">No Burdensome Features</span>
-                    </div>
-                    <div class="grid goodui" onmouseover="ripple('.goodui')">
-                        <span class="material-symbols-rounded" translate="no">auto_awesome</span>
-                        <span class="title">Beautiful UI</span>
-                        <span class="subtitle">With A Minimalist Elegant UI</span>
-                    </div>
-                    <div class="grid privacy" onmouseover="ripple('.privacy')">
-                        <span class="material-symbols-rounded" translate="no">security</span>
-                        <span class="title">Privacy</span>
-                        <span class="subtitle">With Enchanced Security</span>
-                    </div>
-                    <div class="grid uptodate" onmouseover="ripple('.uptodate')">
-                        <span class="material-symbols-rounded" translate="no">system_update</span>
-                        <span class="title">Up-To-Date</span>
-                        <span class="subtitle">Always Use New Security Patch</span>
-                    </div>
-`;
-
-$(window).on('load', function () {
-    $('.advantages .container-grid').append(advantages)
-    $('.sourcechecker').append(sourcechecker)
-     
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.querySelector('.phone').src = "assets/drawable/phone_light.png";
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        const newColorScheme = event.matches ? "dark" : "light";
-        if (newColorScheme == 'light') {
-            document.querySelector('.phone').src = "assets/drawable/phone_light.png";
-        }
-        if (newColorScheme == 'dark') {
-            document.querySelector('.phone').src = "assets/drawable/phone_dark.png";
-        }
-    });
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
 });
+
+async function getDevice() {
+    let url = `https://api.github.com/orgs/SwiftifyLab/repos?per_page=100&page=1&sort=updated&direction=asc`
+    if(params.list == 'pushed'){
+    url = `https://api.github.com/orgs/SwiftifyLab/repos?per_page=100&page=1&sort=pushed&direction=desc`
+   }
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function renderUsers() {
+    let users = await getDevice();
+    const el = document.querySelector('.list');
+    let html = '';
+    var numb = 0;
+    users.forEach(user => {
+        try{
+        if(user.description.includes('!d')){
+            return
+        }
+    } catch(err){}
+        numb++;
+        let htmlSegment = `<li class="list-item" onclick="window.location.href='${baseurl}/${user.name}'">
+                            <div class="list-item-pictures ${user.language}">${numb}</div>
+                            <div class="list-item-content">
+                                <h4>${user.name}</h4>
+                                <p>${user.language} - ${user.description}</p>
+                            </div>
+                           </li>`;
+
+        html += htmlSegment;
+    });
+    let container = document.querySelector('.list');
+    container.innerHTML = html;
+}
